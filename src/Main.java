@@ -17,14 +17,28 @@ public class Main {
         System.out.print("Write your height in [cm]: ");
         height = scanner.nextDouble() / 100;
 
-        //bmi equation
-        bmi = weight / Math.pow(height, 2D);
+        printBmi(weight, height);
 
-        System.out.printf("\nYour BMI is: %.2f", bmi);
+        System.out.println();
+
+        System.out.printf("\nYour BMI is: %.2f", returnBmi(weight, height));
 
         //method to close scanner
         scanner.close();
 
+    }
+
+    //method to calculate and print bmi
+    static void printBmi(double weight, double height) {
+        double bmi = weight / Math.pow(height, 2D);
+        System.out.printf("\nYour BMI is: %.2f", bmi);
+    }
+
+
+    //method to calculate and return bmi
+    static double returnBmi(double weight, double height) {
+        double bmi;
+        return bmi = weight / Math.pow(height, 2D);
     }
 
 }
